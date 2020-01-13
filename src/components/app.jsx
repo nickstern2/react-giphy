@@ -24,7 +24,7 @@ class App extends Component {
       .search({
         q: query,
         rating: 'g',
-        limit: 10
+        limit: 30
       }, (err, result) => {
         this.setState({
           gifs: result.data
