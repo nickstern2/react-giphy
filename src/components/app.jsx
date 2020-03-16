@@ -1,8 +1,6 @@
-// Global imports
 import React, { Component } from 'react';
 import giphy from 'giphy-api';
 
-// Internal imports
 import SearchBar from './search_bar';
 import Gif from './gif';
 import GifList from './gif_list';
@@ -15,7 +13,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "xT9IgDEI1iZyb2wqo8"
+      selectedGifId: "yE72eDy7lj3JS"
     };
   }
 
@@ -23,8 +21,8 @@ class App extends Component {
     giphy({ apiKey: GIPHY_API_KEY, https: true })
       .search({
         q: query,
-        rating: 'g',
-        limit: 30
+        rating: 'r',
+        limit: 10
       }, (err, result) => {
         this.setState({
           gifs: result.data
